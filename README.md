@@ -5,7 +5,7 @@ Este proyecto te permite desplegar Label Studio en Render.com para anotación de
 ## 1. Requisitos previos
 - Cuenta gratuita en [Render.com](https://render.com/)
 - Cuenta gratuita en [Cloudinary](https://cloudinary.com/) (opcional, para almacenar imágenes)
-- Cuenta gratuita en [ElephantSQL](https://www.elephantsql.com/) o usa PostgreSQL de Render
+- Servicio gratuito de base de datos PostgreSQL en Render.com
 
 ## 2. Estructura del proyecto
 - `Dockerfile`: Para desplegar Label Studio en Render.com
@@ -21,7 +21,7 @@ Este proyecto te permite desplegar Label Studio en Render.com para anotación de
 6. Si usas Cloudinary, pon tu URL en `CLOUDINARY_URL`.
 
 ## 4. Configuración de la base de datos
-- Puedes usar ElephantSQL (plan gratuito) o el servicio de PostgreSQL de Render.
+- Usa el servicio gratuito de PostgreSQL de Render.com.
 - Copia la URL de conexión y pégala en la variable `DATABASE_URL`.
 
 ## 5. Configuración de almacenamiento de imágenes

@@ -9,8 +9,6 @@ if [ -n "$DATABASE_URL" ]; then
   done
 fi
 
-# Ejecuta migraciones de la base de datos
-label-studio migrate
 
 # Crea usuario admin si no existe
 if [ -n "$LABEL_STUDIO_USERNAME" ] && [ -n "$LABEL_STUDIO_PASSWORD" ]; then

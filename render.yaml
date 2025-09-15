@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: labelstudio
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: CLOUDINARY_URL
+        sync: false
+      - key: LABEL_STUDIO_USERNAME
+        sync: false
+      - key: LABEL_STUDIO_PASSWORD
+        sync: false
+    autoDeploy: true

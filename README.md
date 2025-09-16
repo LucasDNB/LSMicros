@@ -20,6 +20,14 @@ Este proyecto te permite desplegar Label Studio en Render.com para anotación de
 5. Si usas PostgreSQL de Render, crea un servicio de base de datos y copia la URL en `DATABASE_URL`.
 6. Si usas Cloudinary, pon tu URL en `CLOUDINARY_URL`.
 
+### Importante: Evitar error CSRF 403 en el login
+Agrega estas variables de entorno en la configuración de tu servicio en Render.com:
+
+- **ALLOWED_HOSTS**: `.lsmicros.onrender.com`
+- **DJANGO_CSRF_TRUSTED_ORIGINS**: `https://lsmicros.onrender.com`
+
+Esto es necesario para poder iniciar sesión correctamente en Label Studio desplegado en Render.com.
+
 ## 4. Configuración de la base de datos
 - Usa el servicio gratuito de PostgreSQL de Render.com.
 - Copia la URL de conexión y pégala en la variable `DATABASE_URL`.
